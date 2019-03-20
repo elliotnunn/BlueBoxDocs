@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser(description='''
 
 parser.add_argument('src', action='store', help='Source file')
 parser.add_argument('-o', nargs='?', action='store', help='Listing file to update')
+parser.add_argument('-f', action='store_true', help='Force override listing file')
 
 args = parser.parse_args()
 
@@ -64,6 +65,7 @@ for i in range(len(binary) - len(MOTIF)):
                         line[1] = str(nargs)
                     elif line[1] != str(nargs):
                         print('...WARNING: the listing file says %s' % line[1])
+                        if args.f: line[1] = str(nargs)
                     break
             else:
                 lines.append([selector, str(nargs), '???'])
