@@ -1,602 +1,602 @@
-0001 2 BALDeleteScratchFileMapping
-0002 3 BALCreateScratchFileMapping
-0003 ? BALReleaseUnusedBufPtr
-0004 ? BALGetPhysicalRAMSize
-0005 ? BALGetSysZoneMemorySize
-0006 2 BALCreateBufPtrRegion
-0007 ? BALApplMaxMem
-0008 2 BALCreateProcessMgrZone
-0009 2 BALFMGlobals
-000A 2 BALVMWriteProtect
-000B ? BALVMUnWriteProtect
-000C 1 BALIncreaseFileIDs
-000D 3 BALCreateFileMapping
-0100 4 BALFSDispatch
-0101 4 BALDiskOpen
-0102 ? BALDiskDiscoverAll
-0103 1 BALDiskDiscoverOne
-0104 3 BALDiskPrime
-0105 2 BALDiskEject
-0106 ? BALDiskSetEvents
-0107 ? BALDiskClearEvents
-0108 ? BALDiskInsertInterruptBegin
-0109 1 BALDiskInsertInterruptGetNextNewDrive
-010A 0 BALDiskInsertInterruptEnd
-010B ? BALDiskIOInterruptBegin
-010C ? BALDiskIOInterruptEnd
-010D 3 BALDiskControl
-010E 3 BALDiskStatus
-010F 1 BALDiskIsSharedDriveNum
-0110 1 BALSharedDiskInterruptBegin
-0111 ? BALSharedDiskInterruptEnd
-0112 1 BALDiskMatchBootPRAM
-0113 1 BALDiskCDROMBootCheck
-0114 ? BALDiskIsSharedVCB
-0115 2 BALSharedDiskSaveDTFakeRefNum
-0116 1 BALSharedDiskGetDTFakeRefNum
-0117 1 BALDiskFreeDrvQEl
-0118 ? BALDesktopDBRebuild
-0119 ? BALDesktopDBGetRebuildStatus
-011A ? BALDesktopDBCancelRebuild
-011B 1 BALDiskIsDQEOneOfOurs
-011C 1 BALDiskGetStartupDiskFromPrefs
-011D 2 BALAFPClientBypassEntry
-011E 2 BALFSMountDiskImage
-011F 1 BALFSEnqueueVCB
-0120 1 BALDiskFinishDiskChanged
-0121 ? BALEnsureWritePermissions
-0122 1 BALDiskFindDQEByCarbonVRefNum
-0200 ? BALGetNativeProcessorType
-0201 2 BALWritePRAMByte
-0202 1 BALReadPRAMByte
-0203 1 BALReadTime
-0204 1 BALWriteTime
-0205 1 BALReadNVRAMByte
-0206 2 BALWriteNVRAMByte
-0207 ? BALGetDispatchInfoPtr
-0208 2 BALGetVersionString
-0209 0 BALIsBoxless
-020A 2 BALChkEnabler
-020B 0 BALGetMachineType
-020C 0 BALGetCDFL
-020D 2 BALGestalt
-0300 ? BALCreateInterrupt
-0301 ? BALDeleteInterrupt
-0302 ? BALSetInterrupt
-0304 ? BALDisableInterrupt
-0305 ? BALRestoreInterrupt
-0306 ? BALDisableAllInterrupts
-0307 ? BALRestoreAllInterrupts
-0308 ? BALSetInterruptRefcon
-0309 ? BALGetInterruptRefcon
-030A ? BALGetPendingInterrupt
-030C ? BALPrioritizeInterrupts
-0400 ? BALSerialException
-0401 1 BALSerialInit
-0402 1 BALSerialSetSCCInts
-0403 ? BALSerialOpen
-0404 ? BALSerialClose
-0405 ? BALSerialReadRegister
-0406 ? BALSerialWriteRegister
-0407 ? BALSerialConfigClock
-0408 ? BALSerialNotifyEnv
-0409 ? BALSerialSendBreak
-040A ? BALSerialWrite
-040B ? BALSerialControlWriting
-040C ? BALSerialInsertChar
-040D ? BALSerialReadReq
-040E ? BALSerialControlReading
-040F ? BALSerialBytesAvail
-0410 1 BALSerialClearESInt
-0500 2 BALSoundOpenOutput
-0501 0 BALSoundCloseOutput
-0502 0 BALSoundStartOutput
-0503 0 BALSoundStopOutput
-0504 2 BALSoundWriteOutput
-0505 0 BALClearSoundOutInterrupt
-0506 1 BALSoundComponentOpen
-0507 1 BALSoundSetInfo
-0508 1 BALSoundGetInfo
-0509 2 BALSoundInOpen
-050A 2 BALSoundInPrime
-050B 0 BALSoundInDone
-050C 1 BALSoundInClose
-050D 4 BALGetSoundInputDeviceInfo
-050E 3 BALSetSoundInputDeviceInfo
-050F ? BALSysBeep
-0510 0 BALSleepSound
-0511 0 BALWakeSound
-0512 0 BALSoundInLock
-0513 0 BALSoundInUnlock
-0603 1 BALInitializeTiming
-0604 1 BALMicroseconds
-0605 ? BALNanoseconds
-0607 ? BALStopTime
-0608 ? BALStartTime
-0609 1 BALGetPendingTimer
-060A 2 BALInsTime
-060B 2 BALPrimeTime
-060C 1 BALRmvTime
-060D ? BALUserAppStatus
-060E ? BALForceSleep
-060F ? BALGetTimeBaseInfo
-0700 2 BALInitUserInput
-0701 ? BALCloseUserInput
-0702 3 BALSendADBRequest
-0703 0 BALClearUserInputInterrupt
-0704 0 BALPollUserInputInterrupt
-0706 0 BALDebugEnter
-0707 0 BALDebugExit
-0708 3 BALInitEventInterrupt
-0709 ? BALUnusedUserInputSelector
-070A ? BALGetExposeEventData
-070B ? BALClearExposeEventData
-070C ? BALBlueProcessLaunched
-070D ? BALBlueProcessDied
-070E ? BALRegisteredWithCPS
-070F ? BALGetProcessInfo
-0710 ? BALBluePMReadyForCPSInput
-0711 ? BALGetNextProcess
-0712 ? BALGetFrontProcess
-0713 ? BALSetFrontProcess
-0714 ? BALGetNextExternalProcess
-0715 ? BALFreeCPSEvtMsg
-0716 ? BALCompleteServiceReq
-0717 ? BALLaunchProcess
-0718 ? BALDoServiceRequests
-0719 3 BALInitProgressBar
-071A 0 BALDrawProgressBar
-071B ? BALAEDisposeDesc
-071C ? BALGetEventNotifierData
-071D ? BALClearEventNotifierData
-071E ? BALPostAppShowHideReq
-071F ? BALRegisterScrollWheelCallback
-0720 ? BALGetScrollEventData
-0721 ? BALClearScrollEventData
-0722 3 BALTabletProc
-0723 ? BALGetCurrentProcess
-0724 3 BALDoNotifyForProcess
-0725 2 BALCancelNotifyForProcess
-0726 0 BALMouseMoveCheck
-0727 1 BALMouseDataRegisterUserData
-0728 3 BALMouseDataGet
-0729 1 BALMouseDataComplete
-072A ? BALHIDBuildDeviceList
-072B ? BALHIDReleaseDeviceList
-072C ? BALHIDHaveDeviceList
-072D ? BALHIDCountDevices
-072E ? BALHIDCountDeviceElements
-072F ? BALHIDGetFirstDevice
-0730 ? BALHIDGetNextDevice
-0731 ? BALHIDGetFirstDeviceElement
-0732 ? BALHIDGetNextDeviceElement
-0733 ? BALHIDGetPreviousDeviceElement
-0734 ? BALHIDGetTypeName
-0735 ? BALHIDGetUsageName
-0736 ? BALHIDCalibrateValue
-0737 ? BALHIDScaleValue
-0738 ? BALHIDGetElementValue
-0739 ? BALHIDGetCaps
-073A ? BALHIDGetButtonCaps
-073B ? BALHIDGetValueCaps
-073C ? BALHIDDeviceGetName
-073D ? BALHIDDeviceGetID
-073E ? BALGetIconSuite
-073F ? BALReleaseIconSuite
-0800 1 BALVIA1Init
-0801 ? BALVIA1Exception
-0904 1 BALVDisplayCount
-0905 2 BALVResetIndex
-0906 5 BALVSetGlobals
-0907 2 BALVUpdateRects
-0908 ? BALVUpdateRectAsync
-0909 ? BALVUpdateCursorRect
-090A ? BALVUpdateAll
-090B ? BALVBlueDebugStr
-090C 1 BALVUseYellowCursor
-090D 2 BALVRequestNewClutHandling
-090E 1 BALVFullscreenToggleBegin
-090F 0 BALVFullscreenToggleEnd
-0910 3 BALVGetOrigin
-0911 3 BALVSetOrigin
-0912 5 BALVGetNewMode
-0913 2 BALVGetDisplayNumber
-0914 2 BALVGetDisplayIsColor
-0A00 ? BALVDOpen
-0A01 ? BALVDClose
-0A02 ? BALVDCtlSetMode
-0A03 ? BALVDCtlSetEntries
-0A04 ? BALVDCtlSetGamma
-0A05 ? BALVDCtlGrayPage
-0A06 ? BALVDCtlSetGray
-0A07 ? BALVDCtlSetInterrupt
-0A08 ? BALVDCtlSetDefaultMode
-0A09 ? BALVDCtlSetHardwareCursor
-0A0A ? BALVDCtlDrawHardwareCursor
-0A0B ? BALVDCtlSwitchMode
-0A0C ? BALVDStatusGetMode
-0A0D ? BALVDStatusGetEntries
-0A0E ? BALVDStatusGetPages
-0A0F ? BALVDStatusGetBaseAddr
-0A10 ? BALVDStatusGetGray
-0A11 ? BALVDStatusGetInterrupt
-0A12 ? BALVDStatusGetGamma
-0A13 ? BALVDStatusGetDefaultMode
-0A14 ? BALVDStatusGetCurMode
-0A15 ? BALVDStatusGetConnection
-0A16 ? BALVDStatusGetModeTiming
-0A17 ? BALVDStatusGetNextResolution
-0A18 ? BALVDStatusGetVideoParameters
-0A19 ? BALVDStatusSupportsHardwareCursor
-0A1A ? BALVDStatusGetHardwareCursorDrawState
-0B00 ? BALVIOpen
-0B01 ? BALVIClose
-0B02 ? BALVICtlSetMode
-0B03 ? BALVICtlSetEntries
-0B04 ? BALVICtlSetGamma
-0B05 ? BALVICtlGrayPage
-0B06 ? BALVICtlSetGray
-0B07 ? BALVICtlSetInterrupt
-0B08 ? BALVICtlSetDefaultMode
-0B09 ? BALVICtlSetHardwareCursor
-0B0A ? BALVICtlDrawHardwareCursor
-0B0B ? BALVICtlSwitchMode
-0B0C ? BALVIStatusGetMode
-0B0D ? BALVIStatusGetEntries
-0B0E ? BALVIStatusGetPages
-0B0F ? BALVIStatusGetBaseAddr
-0B10 ? BALVIStatusGetGray
-0B11 ? BALVIStatusGetInterrupt
-0B12 ? BALVIStatusGetGamma
-0B13 ? BALVIStatusGetDefaultMode
-0B14 ? BALVIStatusGetCurMode
-0B15 ? BALVIStatusGetConnection
-0B16 ? BALVIStatusGetModeTiming
-0B17 ? BALVIStatusGetNextResolution
-0B18 ? BALVIStatusGetVideoParameters
-0B19 ? BALVIStatusSupportsHardwareCursor
-0B1A ? BALVIStatusGetHardwareCursorDrawState
-0C00 0 BALShutDown
-0C01 0 BALReStart
-0C02 ? BALResetStartupDiskFlag
-0C03 2 BALEnablerVersionCheck
-0C04 0 BALReportMiscError
-0D00 ? BALEtherOpen
-0D01 ? BALEtherClose
-0D02 ? BALEtherGetAddr
-0D03 ? BALEtherSetAddr
-0D04 ? BALEtherRegHandler
-0D05 ? BALEtherUnRegHandler
-0D06 ? BALEtherEnableInt
-0D07 ? BALEtherDisableInt
-0D08 ? BALEtherRegMulticast
-0D09 ? BALEtherUnRegMulticast
-0D0A ? BALEtherTurnOnPromisc
-0D0B ? BALEtherTurnOffPromisc
-0D0C ? BALEtherRead
-0D0D ? BALEtherWrite
-0D0E ? BALEtherClearInterrupt
-0D0F ? BALEtherFilter
-0D10 ? BALEtherGetInterface
-0D11 ? BALPortReserve
-0D12 ? BALPortRelease
-0D13 ? BALGetNetState
-0D14 ? BALGetNetInfo
-0D15 ? BALRegConfigHandler
-0D16 ? BALUnRegConfigHandler
-0E00 ? BALInitializeSCSI
-0E01 ? BALTerminateSCSI
-0E02 ? BALProcessSCSIRequest
-0E03 ? BALDequeueSCSIRequest
-0E04 ? BALClearSCSIInterrupt
-0E05 ? BALAbortAllSCSIRequests
-0E06 ? BALGetSCSIDeviceInfo
-0E07 ? BALOpenSCSIConfigList
-0E08 ? BALGetSCSIConfigInfo
-0E09 ? BALSetSCSIDevOverride
-0E0A ? BALCloseSCSIConfigList
-0F00 ? BALPasteboardCount
-0F01 ? BALSyncScrapCount
-0F02 ? BALPasteboardToScrap
-0F03 ? BALInvalScrap
-0F04 ? BALScrapIsValid
-0F05 ? BALIsUpdatingScrap
-0F06 ? BALSetUpdatingScrap
-0F07 ? BALIsUpdatingPasteboard
-0F08 ? BALSetUpdatingPasteboard
-0F09 ? BALInitScrap
-0F0A ? BALUpdateScrapTransfer
-0F0B ? BALGetScrapNMRefCon
-0F0C ? BALSetScrapNMRefCon
-0F0E ? BALClearScrapInterrupt
-0F0F ? BALSetSwitchInterrupt
-0F10 ? BALClearSwitchInterrupt
-0F11 ? BALAskToSwitch
-0F12 ? BALScrapSendAllData
-1000 ? BALInitPersonality
-1001 ? BALPostPILMessage
-1002 ? BALSetProxyPSN
-1003 ? BALProxyTerminationNotify
-1004 ? BALSetPILMsgResponse
-1005 ? BALClearPILInterrupt
-1006 ? BALDequeuPILMessage
-1007 ? BALRegisterPILWindow
-1008 ? BALUnregisterPILWindow
-1009 ? BALSetPILWindowAperture
-100A ? BALEnumPILWindow
-100B ? BALGetPILWindowRefCon
-100C ? BALSuspendPILDrawing
-100D ? BALResumePILDrawing
-100E ? BALSendEventFromProxyToEv
-100F ? BALExec
-1100 ? BALVideoAccelNoOp
-1101 ? BALVideoAccelMisc
-1102 ? BALVideoAccelSupports
-1103 ? BALVideoAccelBitBlit
-1104 ? BALVideoAccelRgnBlit
-1105 ? BALVideoAccelPatBlit
-1106 ? BALVideoAccelPatRgnBlit
-1107 ? BALVideoAccelScaleBlit
-1108 ? BALVideoAccelLineBlit
-1109 ? BALVideoAccelSlabBlit
-110A ? BALVideoAccelFinish
-1200 ? BALSwitchToBlueApp
-1201 ? BALSwitchToYellowApp
-1202 ? BALConnectToWS
-1203 ? BALBlueAppLaunched
-1204 ? BALBlueAppDied
-1205 ? BALYellowAppLaunched
-1206 ? BALYellowAppDied
-1207 ? BALActiveYellowApps
-1208 ? BALWSAppInit
-120A ? BALClearWSAppControllerInt
-120B ? BALDequeueWSAppMessage
-120C ? BALSetWSAppMsgResponse
-120D ? BALDeallocYellowAppList
-120E ? BALSetWSAppFrontID
-120F ? BALGetWSAppFrontID
-1210 ? BALGetYellowNameAndIcon
-1211 ? BALDeallocYellowNameAndIcon
-1300 ? BALMPDelayUntilSys
-1301 ? BALMPDelayForSys
-1302 ? BALSetProcessID
-1400 1 BALDebugStr
-1401 ? BALDebugData
-1402 ? BALDebugAddItemToDebugRec
-1403 1 BALDebug_PString
-1404 1 BALDebug_CString
-1405 1 BALDebug_HexInt
-1406 1 BALDebug_DecInt
-1407 ? BALDebug_OSType
-1408 0 BALDebug_NewLine
-1409 ? BALDebug_System
-140A ? BALDebugCStr
-140B ? BALDebug_Microseconds
-140C ? BALLogStr
-140D ? BALLog_PString
-140E 1 BALLog_CString
-140F ? BALLog_HexInt
-1410 ? BALLog_DecInt
-1411 ? BALLog_OSType
-1412 ? BALLog_NewLine
-1500 ? BALAppleEventInit
-1501 ? BALPostMsg
-1507 ? BALCheckMessageQueue
-1508 ? BALMessageHeaderFromQueue
-1509 ? BALMessageDataFromQueue
-150C ? BAL_RetireMessage
-150D ? BAL_DisposeMessage
-150F ? BAL_CheckQueueForPendingEvents
-1510 ? BAL_MessageHeaderHLE
-1511 ? BAL_MessageBody
-1512 1 BAL_PreflightAppleEvent
-1513 ? BAL_GetConnectionType
-1600 ? BAL_CGSInitialize
-1601 ? BAL_CGSNewConnection
-1602 ? BAL_CGSReleaseConnection
-1603 ? BAL_CGSWindowIsOrderedIn
-1604 ? BAL_CGSSetWindowEventMask
-1606 ? BAL_CGSNewWindow
-1607 ? BAL_CGSSetWindowAutofill
-1608 ? BAL_CGSOrderWindow
-1609 ? BAL_CGSReleaseWindow
-160A ? BAL_CGSGetWindowShape
-160B ? BAL_CGSSetWindowShape
-160C ? BAL_CGSMoveWindow
-160D ? BAL_CGSLockWindowVisibleRegion
-160E ? BAL_CGSUnlockWindowVisibleRegion
-160F ? BAL_CGSGetWindowDirtyRegion
-1610 ? BAL_CGSClearWindowDirtyRegion
-1611 ? BAL_CGSGetRegionBounds
-1612 ? BAL_CGSInsetRegion
-1613 ? BAL_CGSOffsetRegion
-1614 ? BAL_CGSGetQDRgnLength
-1615 ? BAL_CGSRegionToQDRgn
-1616 ? BAL_CGSNewRegionWithRect
-1617 ? BAL_CGSGetDisplayBounds
-1618 ? BAL_CGSGetNumberOfDisplays
-1619 ? BALGetCGSDesktopWindows
-161A ? BAL_CGSSetWindowLevel
-161B ? BAL_CGSNewRegionWithQDRgn
-161C ? BAL_CGSReleaseRegion
-161D ? BALAnnounceWindow
-161E ? BALGetLevelForWindow
-161F ? BAL_CGSGetWindowType
-1620 ? BAL_CGSShieldCursor
-1621 ? BAL_CGSUnshieldCursor
-1622 ? BAL_CGSShowCursor
-1623 ? BAL_CGSRegionIsEmpty
-1624 ? BAL_CGSWindowVisibleRegionSeed
-1625 ? BALLockWindow
-1626 ? BALUnlockWindow
-1627 ? BAL_CGSGetSystemWindow
-1628 ? BALLockAllWindows
-1629 ? BALUnlockAllWindows
-162A ? BALIgnoreDirtyAllWindows
-162B ? BAL_CGSHardwareCursorActive
-162C ? BALDoesClassicHaveFocus
-162D 3 BALMiscUtils
-162E ? BAL_CGSDisplayCanHWCopy
-162F ? BAL_CGSDisplayCanHWFill
-1630 ? BAL_CGSDisplayHWFill
-1631 ? BAL_CGSDisplayHWCopy
-1632 ? BAL_CGSDisplayHWSync
-1633 ? BAL_CGSCopyRegion
-1634 ? BALBeginConfigureDisplays
-1635 ? BALEndConfigureDisplays
-1636 ? BAL_IOKDisplayCanHWCopy
-1637 ? BAL_IOKDisplayCanHWSolidFill
-1638 ? BAL_IOKDisplayCanHWMonoPatFill
-1639 ? BAL_IOKDisplayCanHWSolidLine
-163A ? BAL_IOKDisplayWait
-163B ? BAL_IOKDisplayHWCopy
-163C ? BAL_IOKDisplayHWSolidFill
-163D ? BAL_IOKDisplayHWMonoPatFill
-163E ? BAL_IOKDisplayHWSolidLine
-163F ? BAL_IOKInitInterface
-1640 ? BAL_IOKCloseInterface
-1641 ? BAL_CGBlt_copyBytes
-1642 ? BAL_VABFlushAll
-1643 ? BAL_VABFlush
-1644 ? BAL_VABGetVars
-1645 ? BALAnnounceMenuBarShape
-1646 0 BALOpenStartupScreen
-1647 ? BALCoreDockGetRect
-164A ? BALAnnounceMenuBarShape2
-164B ? BAL_CGCaptureAllDisplays
-164C ? BAL_CGReleaseAllDisplays
-164D ? BAL_CGSWindowScrollRegion
-164E ? BALDBClassic_FillBuffer
-164F ? BALDBClassic_GetFlushRects
-1650 ? BALDBClassic_FlushRects
-1651 ? BALDBClassic_GetInfo
-1652 ? BALDBClassic_GetVisibleRegion
-1653 ? BAL_CGSNewEmptyRegion
-1654 ? BAL_CGSSetWindowAlpha
-1655 0 BALDBClassic_IsOn
-1656 0 BALDisplayInfoUpdate
-1657 ? BALDisplayReconfigureBegin
-1658 ? BALDisplayReconfigureEnd
-1659 ? BAL_CGSGetWindowAutofill
-1660 1 BALAlertWindowOpen
-1661 1 BALAlertWindowClose
-1662 ? BALWindowGetGLContextRegion
-1700 ? BALUSBMisc
-1701 ? BALUSBInitialize
-1702 ? BALUSBFinalize
-1703 ? BALUSBGetCurrentFrameNumber
-1704 ? BALUSBSetAddress
-1705 ? BALUSBSetConfiguration
-1706 ? BALUSBSetAlternateInterface
-1707 ? BALUSBDeviceRequestAsync
-1708 ? BALUSBControlRequestAsync
-1709 ? BALUSBReadPipeAsync
-170A ? BALUSBWritePipeAsync
-170B ? BALUSBGetCompletedIO
-170C ? BALUSBControlEDCreate
-170D ? BALUSBBulkEDCreate
-170E ? BALUSBInterruptEDCreate
-170F ? BALUSBEndpointDelete
-1710 ? BALUSBAbortEndpoint
-1711 ? BALUSBProcessDoneQueue
-1712 ? BALUSBClearEndPointStall
-1713 ? BALUSBTransactionDataRemaining
-1714 ? BALUSBAbortRemainingTransaction
-1715 ? BALUSBGetInterruptStatus
-1716 ? BALUSBClearInterruptStatus
-1717 ? BALUSBGetRhStatus
-1718 ? BALUSBRootHubGetPortStatus
-1719 ? BALUSBRootHubResetChangeConnection
-171A ? BALUSBRootHubResetResetChange
-171B ? BALUSBRootHubResetSuspendChange
-171C ? BALUSBRootHubResetEnableChange
-171D ? BALUSBRootHubResetOverCurrentChange
-171E ? BALUSBRootHubResetPort
-171F ? BALUSBRootHubPortEnable
-1720 ? BALUSBRootHubPortSuspend
-1721 ? BALUSBRootHubPortPower
-1722 ? BALUSBNewIO
-1723 ? BALUSBReadIsochPipeAsync
-1724 ? BALUSBWriteIsochPipeAsync
-1725 ? BALUSBIsochEDCreate
-172A ? BALUSBGetPendingTransactionInfoField
-172B ? BALUSBSetPendingTransactionInfoField
-172C ? BALUSBNextPendingTransactionSetNULLProc
-1800 ? BALDragSendMsg
-1801 ? BALDragAddRequest
-1802 ? BALDragDequeueRequest
-1803 ? BALDragStartDrag
-1804 ? BALDragSendMsgNoReply
-1805 ? BALDragCopyItemFlavorData
-1806 ? BALGetCoreDragDropLocation
-1807 ? BALSetCoreDragDropLocation
-1808 ? BALDragEndDrag
-1900 7 BALFindFolder
-1901 3 BALInitFindFolder
-1902 1 BALAskToPopulateRedirectedFolders
-1A00 ? BAL_aglChoosePixelFormat
-1A01 ? BAL_aglDestroyPixelFormat
-1A02 ? BAL_aglNextPixelFormat
-1A03 ? BAL_aglDescribePixelFormat
-1A04 ? BAL_aglDevicesOfPixelFormat
-1A05 ? BAL_aglQueryRendererInfo
-1A06 ? BAL_aglDestroyRendererInfo
-1A07 ? BAL_aglNextRendererInfo
-1A08 ? BAL_aglDescribeRenderer
-1A09 ? BAL_aglCreateContext
-1A0A ? BAL_aglDestroyContext
-1A0B ? BAL_aglCopyContext
-1A0C ? BAL_aglUpdateContext
-1A0D ? BAL_aglSetCurrentContext
-1A0E ? BAL_aglGetCurrentContext
-1A0F ? BAL_aglSetDrawable
-1A10 ? BAL_aglSetOffScreen
-1A11 ? BAL_aglSetFullScreen
-1A12 ? BAL_aglGetDrawable
-1A13 ? BAL_aglSetVirtualScreen
-1A14 ? BAL_aglGetVirtualScreen
-1A15 ? BAL_aglGetVersion
-1A16 ? BAL_aglConfigure
-1A17 ? BAL_aglSwapBuffers
-1A18 ? BAL_aglEnable
-1A19 ? BAL_aglDisable
-1A1A ? BAL_aglIsEnabled
-1A1B ? BAL_aglSetInteger
-1A1C ? BAL_aglGetInteger
-1A1D ? BAL_aglUseFont
-1A1E ? BAL_aglGetError
-1A1F ? BAL_aglErrorString
-1A20 ? BAL_aglResetLibrary
-1A21 ? BAL_aglExecutor
-1B00 ? BALICStart
-1B01 ? BALICStop
-1B02 ? BALICGetVersion
-1B03 ? BALICGetConfigName
-1B04 ? BALICGetSeed
-1B05 ? BALICGetPerm
-1B06 ? BALICBegin
-1B07 ? BALICGetPref
-1B08 ? BALICSetPref
-1B09 ? BALICCountPref
-1B0A ? BALICGetIndPref
-1B0B ? BALICDeletePref
-1B0C ? BALICEnd
-1B0D ? BALICGetDefaultPref
-1B0E ? BALICEditPreferences
-1B0F ? BALICLaunchURL
-1B10 ? BALICParseURL
-1B11 ? BALICCreateGURLEvent
-1B12 ? BALICSendGURLEvent
-1B13 ? BALICMapFilename
-1B14 ? BALICMapTypeCreator
-1B15 1 BAL_DisposeCarbonCoreHandle
-1C00 3 BALCopyObject
-1C01 ? BALDeleteObject
-1D00 ? BALGetCurrentXPrinter
-1D01 ? BALReleasePrinterDesc
-1D02 1 BALPrinterIsAuthorized
-1D03 ? BALGetCurrentXPrinterClientName
-1E01 4 BALResolveAliasFile
-1E02 ? BALMatchAlias
-1E03 ? BALNewAlias
-1E04 7 BALUpdateAlias
+0001 2 long BALDeleteScratchFileMapping()
+0002 3 long BALCreateScratchFileMapping()
+0003 ? long BALReleaseUnusedBufPtr()
+0004 ? long BALGetPhysicalRAMSize()
+0005 ? long BALGetSysZoneMemorySize()
+0006 2 long BALCreateBufPtrRegion()
+0007 ? long BALApplMaxMem()
+0008 2 long BALCreateProcessMgrZone()
+0009 2 long BALFMGlobals()
+000A 2 long BALVMWriteProtect()
+000B ? long BALVMUnWriteProtect()
+000C 1 long BALIncreaseFileIDs()
+000D 3 long BALCreateFileMapping()
+0100 4 long BALFSDispatch()
+0101 4 long BALDiskOpen()
+0102 ? long BALDiskDiscoverAll()
+0103 1 long BALDiskDiscoverOne()
+0104 3 long BALDiskPrime()
+0105 2 long BALDiskEject()
+0106 ? long BALDiskSetEvents()
+0107 ? long BALDiskClearEvents()
+0108 ? long BALDiskInsertInterruptBegin()
+0109 1 long BALDiskInsertInterruptGetNextNewDrive()
+010A 0 long BALDiskInsertInterruptEnd()
+010B ? long BALDiskIOInterruptBegin()
+010C ? long BALDiskIOInterruptEnd()
+010D 3 long BALDiskControl()
+010E 3 long BALDiskStatus()
+010F 1 long BALDiskIsSharedDriveNum()
+0110 1 long BALSharedDiskInterruptBegin()
+0111 ? long BALSharedDiskInterruptEnd()
+0112 1 long BALDiskMatchBootPRAM()
+0113 1 long BALDiskCDROMBootCheck()
+0114 ? long BALDiskIsSharedVCB()
+0115 2 long BALSharedDiskSaveDTFakeRefNum()
+0116 1 long BALSharedDiskGetDTFakeRefNum()
+0117 1 long BALDiskFreeDrvQEl()
+0118 ? long BALDesktopDBRebuild()
+0119 ? long BALDesktopDBGetRebuildStatus()
+011A ? long BALDesktopDBCancelRebuild()
+011B 1 long BALDiskIsDQEOneOfOurs()
+011C 1 long BALDiskGetStartupDiskFromPrefs()
+011D 2 long BALAFPClientBypassEntry()
+011E 2 long BALFSMountDiskImage()
+011F 1 long BALFSEnqueueVCB()
+0120 1 long BALDiskFinishDiskChanged()
+0121 ? long BALEnsureWritePermissions()
+0122 1 long BALDiskFindDQEByCarbonVRefNum()
+0200 ? long BALGetNativeProcessorType()
+0201 2 long BALWritePRAMByte()
+0202 1 long BALReadPRAMByte()
+0203 1 long BALReadTime()
+0204 1 long BALWriteTime()
+0205 1 long BALReadNVRAMByte()
+0206 2 long BALWriteNVRAMByte()
+0207 ? long BALGetDispatchInfoPtr()
+0208 2 long BALGetVersionString()
+0209 0 long BALIsBoxless()
+020A 2 long BALChkEnabler()
+020B 0 long BALGetMachineType()
+020C 0 long BALGetCDFL()
+020D 2 long BALGestalt()
+0300 ? long BALCreateInterrupt()
+0301 ? long BALDeleteInterrupt()
+0302 ? long BALSetInterrupt()
+0304 ? long BALDisableInterrupt()
+0305 ? long BALRestoreInterrupt()
+0306 ? long BALDisableAllInterrupts()
+0307 ? long BALRestoreAllInterrupts()
+0308 ? long BALSetInterruptRefcon()
+0309 ? long BALGetInterruptRefcon()
+030A ? long BALGetPendingInterrupt()
+030C ? long BALPrioritizeInterrupts()
+0400 ? long BALSerialException()
+0401 1 long BALSerialInit()
+0402 1 long BALSerialSetSCCInts()
+0403 ? long BALSerialOpen()
+0404 ? long BALSerialClose()
+0405 ? long BALSerialReadRegister()
+0406 ? long BALSerialWriteRegister()
+0407 ? long BALSerialConfigClock()
+0408 ? long BALSerialNotifyEnv()
+0409 ? long BALSerialSendBreak()
+040A ? long BALSerialWrite()
+040B ? long BALSerialControlWriting()
+040C ? long BALSerialInsertChar()
+040D ? long BALSerialReadReq()
+040E ? long BALSerialControlReading()
+040F ? long BALSerialBytesAvail()
+0410 1 long BALSerialClearESInt()
+0500 2 long BALSoundOpenOutput()
+0501 0 long BALSoundCloseOutput()
+0502 0 long BALSoundStartOutput()
+0503 0 long BALSoundStopOutput()
+0504 2 long BALSoundWriteOutput()
+0505 0 long BALClearSoundOutInterrupt()
+0506 1 long BALSoundComponentOpen()
+0507 1 long BALSoundSetInfo()
+0508 1 long BALSoundGetInfo()
+0509 2 long BALSoundInOpen()
+050A 2 long BALSoundInPrime()
+050B 0 long BALSoundInDone()
+050C 1 long BALSoundInClose()
+050D 4 long BALGetSoundInputDeviceInfo()
+050E 3 long BALSetSoundInputDeviceInfo()
+050F ? long BALSysBeep()
+0510 0 long BALSleepSound()
+0511 0 long BALWakeSound()
+0512 0 long BALSoundInLock()
+0513 0 long BALSoundInUnlock()
+0603 1 long BALInitializeTiming()
+0604 1 long BALMicroseconds()
+0605 ? long BALNanoseconds()
+0607 ? long BALStopTime()
+0608 ? long BALStartTime()
+0609 1 long BALGetPendingTimer()
+060A 2 long BALInsTime()
+060B 2 long BALPrimeTime()
+060C 1 long BALRmvTime()
+060D ? long BALUserAppStatus()
+060E ? long BALForceSleep()
+060F ? long BALGetTimeBaseInfo()
+0700 2 long BALInitUserInput()
+0701 ? long BALCloseUserInput()
+0702 3 long BALSendADBRequest()
+0703 0 long BALClearUserInputInterrupt()
+0704 0 long BALPollUserInputInterrupt()
+0706 0 long BALDebugEnter()
+0707 0 long BALDebugExit()
+0708 3 long BALInitEventInterrupt()
+0709 ? long BALUnusedUserInputSelector()
+070A ? long BALGetExposeEventData()
+070B ? long BALClearExposeEventData()
+070C ? long BALBlueProcessLaunched()
+070D ? long BALBlueProcessDied()
+070E ? long BALRegisteredWithCPS()
+070F ? long BALGetProcessInfo()
+0710 ? long BALBluePMReadyForCPSInput()
+0711 ? long BALGetNextProcess()
+0712 ? long BALGetFrontProcess()
+0713 ? long BALSetFrontProcess()
+0714 ? long BALGetNextExternalProcess()
+0715 ? long BALFreeCPSEvtMsg()
+0716 ? long BALCompleteServiceReq()
+0717 ? long BALLaunchProcess()
+0718 ? long BALDoServiceRequests()
+0719 3 long BALInitProgressBar()
+071A 0 long BALDrawProgressBar()
+071B ? long BALAEDisposeDesc()
+071C ? long BALGetEventNotifierData()
+071D ? long BALClearEventNotifierData()
+071E ? long BALPostAppShowHideReq()
+071F ? long BALRegisterScrollWheelCallback()
+0720 ? long BALGetScrollEventData()
+0721 ? long BALClearScrollEventData()
+0722 3 long BALTabletProc()
+0723 ? long BALGetCurrentProcess()
+0724 3 long BALDoNotifyForProcess()
+0725 2 long BALCancelNotifyForProcess()
+0726 0 long BALMouseMoveCheck()
+0727 1 long BALMouseDataRegisterUserData()
+0728 3 long BALMouseDataGet()
+0729 1 long BALMouseDataComplete()
+072A ? long BALHIDBuildDeviceList()
+072B ? long BALHIDReleaseDeviceList()
+072C ? long BALHIDHaveDeviceList()
+072D ? long BALHIDCountDevices()
+072E ? long BALHIDCountDeviceElements()
+072F ? long BALHIDGetFirstDevice()
+0730 ? long BALHIDGetNextDevice()
+0731 ? long BALHIDGetFirstDeviceElement()
+0732 ? long BALHIDGetNextDeviceElement()
+0733 ? long BALHIDGetPreviousDeviceElement()
+0734 ? long BALHIDGetTypeName()
+0735 ? long BALHIDGetUsageName()
+0736 ? long BALHIDCalibrateValue()
+0737 ? long BALHIDScaleValue()
+0738 ? long BALHIDGetElementValue()
+0739 ? long BALHIDGetCaps()
+073A ? long BALHIDGetButtonCaps()
+073B ? long BALHIDGetValueCaps()
+073C ? long BALHIDDeviceGetName()
+073D ? long BALHIDDeviceGetID()
+073E ? long BALGetIconSuite()
+073F ? long BALReleaseIconSuite()
+0800 1 long BALVIA1Init()
+0801 ? long BALVIA1Exception()
+0904 1 long BALVDisplayCount()
+0905 2 long BALVResetIndex()
+0906 5 long BALVSetGlobals()
+0907 2 long BALVUpdateRects()
+0908 ? long BALVUpdateRectAsync()
+0909 ? long BALVUpdateCursorRect()
+090A ? long BALVUpdateAll()
+090B ? long BALVBlueDebugStr()
+090C 1 long BALVUseYellowCursor()
+090D 2 long BALVRequestNewClutHandling()
+090E 1 long BALVFullscreenToggleBegin()
+090F 0 long BALVFullscreenToggleEnd()
+0910 3 long BALVGetOrigin()
+0911 3 long BALVSetOrigin()
+0912 5 long BALVGetNewMode()
+0913 2 long BALVGetDisplayNumber()
+0914 2 long BALVGetDisplayIsColor()
+0A00 ? long BALVDOpen()
+0A01 ? long BALVDClose()
+0A02 ? long BALVDCtlSetMode()
+0A03 ? long BALVDCtlSetEntries()
+0A04 ? long BALVDCtlSetGamma()
+0A05 ? long BALVDCtlGrayPage()
+0A06 ? long BALVDCtlSetGray()
+0A07 ? long BALVDCtlSetInterrupt()
+0A08 ? long BALVDCtlSetDefaultMode()
+0A09 ? long BALVDCtlSetHardwareCursor()
+0A0A ? long BALVDCtlDrawHardwareCursor()
+0A0B ? long BALVDCtlSwitchMode()
+0A0C ? long BALVDStatusGetMode()
+0A0D ? long BALVDStatusGetEntries()
+0A0E ? long BALVDStatusGetPages()
+0A0F ? long BALVDStatusGetBaseAddr()
+0A10 ? long BALVDStatusGetGray()
+0A11 ? long BALVDStatusGetInterrupt()
+0A12 ? long BALVDStatusGetGamma()
+0A13 ? long BALVDStatusGetDefaultMode()
+0A14 ? long BALVDStatusGetCurMode()
+0A15 ? long BALVDStatusGetConnection()
+0A16 ? long BALVDStatusGetModeTiming()
+0A17 ? long BALVDStatusGetNextResolution()
+0A18 ? long BALVDStatusGetVideoParameters()
+0A19 ? long BALVDStatusSupportsHardwareCursor()
+0A1A ? long BALVDStatusGetHardwareCursorDrawState()
+0B00 ? long BALVIOpen()
+0B01 ? long BALVIClose()
+0B02 ? long BALVICtlSetMode()
+0B03 ? long BALVICtlSetEntries()
+0B04 ? long BALVICtlSetGamma()
+0B05 ? long BALVICtlGrayPage()
+0B06 ? long BALVICtlSetGray()
+0B07 ? long BALVICtlSetInterrupt()
+0B08 ? long BALVICtlSetDefaultMode()
+0B09 ? long BALVICtlSetHardwareCursor()
+0B0A ? long BALVICtlDrawHardwareCursor()
+0B0B ? long BALVICtlSwitchMode()
+0B0C ? long BALVIStatusGetMode()
+0B0D ? long BALVIStatusGetEntries()
+0B0E ? long BALVIStatusGetPages()
+0B0F ? long BALVIStatusGetBaseAddr()
+0B10 ? long BALVIStatusGetGray()
+0B11 ? long BALVIStatusGetInterrupt()
+0B12 ? long BALVIStatusGetGamma()
+0B13 ? long BALVIStatusGetDefaultMode()
+0B14 ? long BALVIStatusGetCurMode()
+0B15 ? long BALVIStatusGetConnection()
+0B16 ? long BALVIStatusGetModeTiming()
+0B17 ? long BALVIStatusGetNextResolution()
+0B18 ? long BALVIStatusGetVideoParameters()
+0B19 ? long BALVIStatusSupportsHardwareCursor()
+0B1A ? long BALVIStatusGetHardwareCursorDrawState()
+0C00 0 long BALShutDown()
+0C01 0 long BALReStart()
+0C02 ? long BALResetStartupDiskFlag()
+0C03 2 long BALEnablerVersionCheck()
+0C04 0 long BALReportMiscError()
+0D00 ? long BALEtherOpen()
+0D01 ? long BALEtherClose()
+0D02 ? long BALEtherGetAddr()
+0D03 ? long BALEtherSetAddr()
+0D04 ? long BALEtherRegHandler()
+0D05 ? long BALEtherUnRegHandler()
+0D06 ? long BALEtherEnableInt()
+0D07 ? long BALEtherDisableInt()
+0D08 ? long BALEtherRegMulticast()
+0D09 ? long BALEtherUnRegMulticast()
+0D0A ? long BALEtherTurnOnPromisc()
+0D0B ? long BALEtherTurnOffPromisc()
+0D0C ? long BALEtherRead()
+0D0D ? long BALEtherWrite()
+0D0E ? long BALEtherClearInterrupt()
+0D0F ? long BALEtherFilter()
+0D10 ? long BALEtherGetInterface()
+0D11 ? long BALPortReserve()
+0D12 ? long BALPortRelease()
+0D13 ? long BALGetNetState()
+0D14 ? long BALGetNetInfo()
+0D15 ? long BALRegConfigHandler()
+0D16 ? long BALUnRegConfigHandler()
+0E00 ? long BALInitializeSCSI()
+0E01 ? long BALTerminateSCSI()
+0E02 ? long BALProcessSCSIRequest()
+0E03 ? long BALDequeueSCSIRequest()
+0E04 ? long BALClearSCSIInterrupt()
+0E05 ? long BALAbortAllSCSIRequests()
+0E06 ? long BALGetSCSIDeviceInfo()
+0E07 ? long BALOpenSCSIConfigList()
+0E08 ? long BALGetSCSIConfigInfo()
+0E09 ? long BALSetSCSIDevOverride()
+0E0A ? long BALCloseSCSIConfigList()
+0F00 ? long BALPasteboardCount()
+0F01 ? long BALSyncScrapCount()
+0F02 ? long BALPasteboardToScrap()
+0F03 ? long BALInvalScrap()
+0F04 ? long BALScrapIsValid()
+0F05 ? long BALIsUpdatingScrap()
+0F06 ? long BALSetUpdatingScrap()
+0F07 ? long BALIsUpdatingPasteboard()
+0F08 ? long BALSetUpdatingPasteboard()
+0F09 ? long BALInitScrap()
+0F0A ? long BALUpdateScrapTransfer()
+0F0B ? long BALGetScrapNMRefCon()
+0F0C ? long BALSetScrapNMRefCon()
+0F0E ? long BALClearScrapInterrupt()
+0F0F ? long BALSetSwitchInterrupt()
+0F10 ? long BALClearSwitchInterrupt()
+0F11 ? long BALAskToSwitch()
+0F12 ? long BALScrapSendAllData()
+1000 ? long BALInitPersonality()
+1001 ? long BALPostPILMessage()
+1002 ? long BALSetProxyPSN()
+1003 ? long BALProxyTerminationNotify()
+1004 ? long BALSetPILMsgResponse()
+1005 ? long BALClearPILInterrupt()
+1006 ? long BALDequeuPILMessage()
+1007 ? long BALRegisterPILWindow()
+1008 ? long BALUnregisterPILWindow()
+1009 ? long BALSetPILWindowAperture()
+100A ? long BALEnumPILWindow()
+100B ? long BALGetPILWindowRefCon()
+100C ? long BALSuspendPILDrawing()
+100D ? long BALResumePILDrawing()
+100E ? long BALSendEventFromProxyToEv()
+100F ? long BALExec()
+1100 ? long BALVideoAccelNoOp()
+1101 ? long BALVideoAccelMisc()
+1102 ? long BALVideoAccelSupports()
+1103 ? long BALVideoAccelBitBlit()
+1104 ? long BALVideoAccelRgnBlit()
+1105 ? long BALVideoAccelPatBlit()
+1106 ? long BALVideoAccelPatRgnBlit()
+1107 ? long BALVideoAccelScaleBlit()
+1108 ? long BALVideoAccelLineBlit()
+1109 ? long BALVideoAccelSlabBlit()
+110A ? long BALVideoAccelFinish()
+1200 ? long BALSwitchToBlueApp()
+1201 ? long BALSwitchToYellowApp()
+1202 ? long BALConnectToWS()
+1203 ? long BALBlueAppLaunched()
+1204 ? long BALBlueAppDied()
+1205 ? long BALYellowAppLaunched()
+1206 ? long BALYellowAppDied()
+1207 ? long BALActiveYellowApps()
+1208 ? long BALWSAppInit()
+120A ? long BALClearWSAppControllerInt()
+120B ? long BALDequeueWSAppMessage()
+120C ? long BALSetWSAppMsgResponse()
+120D ? long BALDeallocYellowAppList()
+120E ? long BALSetWSAppFrontID()
+120F ? long BALGetWSAppFrontID()
+1210 ? long BALGetYellowNameAndIcon()
+1211 ? long BALDeallocYellowNameAndIcon()
+1300 ? long BALMPDelayUntilSys()
+1301 ? long BALMPDelayForSys()
+1302 ? long BALSetProcessID()
+1400 1 long BALDebugStr()
+1401 ? long BALDebugData()
+1402 ? long BALDebugAddItemToDebugRec()
+1403 1 long BALDebug_PString()
+1404 1 long BALDebug_CString()
+1405 1 long BALDebug_HexInt()
+1406 1 long BALDebug_DecInt()
+1407 ? long BALDebug_OSType()
+1408 0 long BALDebug_NewLine()
+1409 ? long BALDebug_System()
+140A ? long BALDebugCStr()
+140B ? long BALDebug_Microseconds()
+140C ? long BALLogStr()
+140D ? long BALLog_PString()
+140E 1 long BALLog_CString()
+140F ? long BALLog_HexInt()
+1410 ? long BALLog_DecInt()
+1411 ? long BALLog_OSType()
+1412 ? long BALLog_NewLine()
+1500 ? long BALAppleEventInit()
+1501 ? long BALPostMsg()
+1507 ? long BALCheckMessageQueue()
+1508 ? long BALMessageHeaderFromQueue()
+1509 ? long BALMessageDataFromQueue()
+150C ? long BAL_RetireMessage()
+150D ? long BAL_DisposeMessage()
+150F ? long BAL_CheckQueueForPendingEvents()
+1510 ? long BAL_MessageHeaderHLE()
+1511 ? long BAL_MessageBody()
+1512 1 long BAL_PreflightAppleEvent()
+1513 ? long BAL_GetConnectionType()
+1600 ? long BAL_CGSInitialize()
+1601 ? long BAL_CGSNewConnection()
+1602 ? long BAL_CGSReleaseConnection()
+1603 ? long BAL_CGSWindowIsOrderedIn()
+1604 ? long BAL_CGSSetWindowEventMask()
+1606 ? long BAL_CGSNewWindow()
+1607 ? long BAL_CGSSetWindowAutofill()
+1608 ? long BAL_CGSOrderWindow()
+1609 ? long BAL_CGSReleaseWindow()
+160A ? long BAL_CGSGetWindowShape()
+160B ? long BAL_CGSSetWindowShape()
+160C ? long BAL_CGSMoveWindow()
+160D ? long BAL_CGSLockWindowVisibleRegion()
+160E ? long BAL_CGSUnlockWindowVisibleRegion()
+160F ? long BAL_CGSGetWindowDirtyRegion()
+1610 ? long BAL_CGSClearWindowDirtyRegion()
+1611 ? long BAL_CGSGetRegionBounds()
+1612 ? long BAL_CGSInsetRegion()
+1613 ? long BAL_CGSOffsetRegion()
+1614 ? long BAL_CGSGetQDRgnLength()
+1615 ? long BAL_CGSRegionToQDRgn()
+1616 ? long BAL_CGSNewRegionWithRect()
+1617 ? long BAL_CGSGetDisplayBounds()
+1618 ? long BAL_CGSGetNumberOfDisplays()
+1619 ? long BALGetCGSDesktopWindows()
+161A ? long BAL_CGSSetWindowLevel()
+161B ? long BAL_CGSNewRegionWithQDRgn()
+161C ? long BAL_CGSReleaseRegion()
+161D ? long BALAnnounceWindow()
+161E ? long BALGetLevelForWindow()
+161F ? long BAL_CGSGetWindowType()
+1620 ? long BAL_CGSShieldCursor()
+1621 ? long BAL_CGSUnshieldCursor()
+1622 ? long BAL_CGSShowCursor()
+1623 ? long BAL_CGSRegionIsEmpty()
+1624 ? long BAL_CGSWindowVisibleRegionSeed()
+1625 ? long BALLockWindow()
+1626 ? long BALUnlockWindow()
+1627 ? long BAL_CGSGetSystemWindow()
+1628 ? long BALLockAllWindows()
+1629 ? long BALUnlockAllWindows()
+162A ? long BALIgnoreDirtyAllWindows()
+162B ? long BAL_CGSHardwareCursorActive()
+162C ? long BALDoesClassicHaveFocus()
+162D 3 long BALMiscUtils()
+162E ? long BAL_CGSDisplayCanHWCopy()
+162F ? long BAL_CGSDisplayCanHWFill()
+1630 ? long BAL_CGSDisplayHWFill()
+1631 ? long BAL_CGSDisplayHWCopy()
+1632 ? long BAL_CGSDisplayHWSync()
+1633 ? long BAL_CGSCopyRegion()
+1634 ? long BALBeginConfigureDisplays()
+1635 ? long BALEndConfigureDisplays()
+1636 ? long BAL_IOKDisplayCanHWCopy()
+1637 ? long BAL_IOKDisplayCanHWSolidFill()
+1638 ? long BAL_IOKDisplayCanHWMonoPatFill()
+1639 ? long BAL_IOKDisplayCanHWSolidLine()
+163A ? long BAL_IOKDisplayWait()
+163B ? long BAL_IOKDisplayHWCopy()
+163C ? long BAL_IOKDisplayHWSolidFill()
+163D ? long BAL_IOKDisplayHWMonoPatFill()
+163E ? long BAL_IOKDisplayHWSolidLine()
+163F ? long BAL_IOKInitInterface()
+1640 ? long BAL_IOKCloseInterface()
+1641 ? long BAL_CGBlt_copyBytes()
+1642 ? long BAL_VABFlushAll()
+1643 ? long BAL_VABFlush()
+1644 ? long BAL_VABGetVars()
+1645 ? long BALAnnounceMenuBarShape()
+1646 0 long BALOpenStartupScreen()
+1647 ? long BALCoreDockGetRect()
+164A ? long BALAnnounceMenuBarShape2()
+164B ? long BAL_CGCaptureAllDisplays()
+164C ? long BAL_CGReleaseAllDisplays()
+164D ? long BAL_CGSWindowScrollRegion()
+164E ? long BALDBClassic_FillBuffer()
+164F ? long BALDBClassic_GetFlushRects()
+1650 ? long BALDBClassic_FlushRects()
+1651 ? long BALDBClassic_GetInfo()
+1652 ? long BALDBClassic_GetVisibleRegion()
+1653 ? long BAL_CGSNewEmptyRegion()
+1654 ? long BAL_CGSSetWindowAlpha()
+1655 0 long BALDBClassic_IsOn()
+1656 0 long BALDisplayInfoUpdate()
+1657 ? long BALDisplayReconfigureBegin()
+1658 ? long BALDisplayReconfigureEnd()
+1659 ? long BAL_CGSGetWindowAutofill()
+1660 1 long BALAlertWindowOpen()
+1661 1 long BALAlertWindowClose()
+1662 ? long BALWindowGetGLContextRegion()
+1700 ? long BALUSBMisc()
+1701 ? long BALUSBInitialize()
+1702 ? long BALUSBFinalize()
+1703 ? long BALUSBGetCurrentFrameNumber()
+1704 ? long BALUSBSetAddress()
+1705 ? long BALUSBSetConfiguration()
+1706 ? long BALUSBSetAlternateInterface()
+1707 ? long BALUSBDeviceRequestAsync()
+1708 ? long BALUSBControlRequestAsync()
+1709 ? long BALUSBReadPipeAsync()
+170A ? long BALUSBWritePipeAsync()
+170B ? long BALUSBGetCompletedIO()
+170C ? long BALUSBControlEDCreate()
+170D ? long BALUSBBulkEDCreate()
+170E ? long BALUSBInterruptEDCreate()
+170F ? long BALUSBEndpointDelete()
+1710 ? long BALUSBAbortEndpoint()
+1711 ? long BALUSBProcessDoneQueue()
+1712 ? long BALUSBClearEndPointStall()
+1713 ? long BALUSBTransactionDataRemaining()
+1714 ? long BALUSBAbortRemainingTransaction()
+1715 ? long BALUSBGetInterruptStatus()
+1716 ? long BALUSBClearInterruptStatus()
+1717 ? long BALUSBGetRhStatus()
+1718 ? long BALUSBRootHubGetPortStatus()
+1719 ? long BALUSBRootHubResetChangeConnection()
+171A ? long BALUSBRootHubResetResetChange()
+171B ? long BALUSBRootHubResetSuspendChange()
+171C ? long BALUSBRootHubResetEnableChange()
+171D ? long BALUSBRootHubResetOverCurrentChange()
+171E ? long BALUSBRootHubResetPort()
+171F ? long BALUSBRootHubPortEnable()
+1720 ? long BALUSBRootHubPortSuspend()
+1721 ? long BALUSBRootHubPortPower()
+1722 ? long BALUSBNewIO()
+1723 ? long BALUSBReadIsochPipeAsync()
+1724 ? long BALUSBWriteIsochPipeAsync()
+1725 ? long BALUSBIsochEDCreate()
+172A ? long BALUSBGetPendingTransactionInfoField()
+172B ? long BALUSBSetPendingTransactionInfoField()
+172C ? long BALUSBNextPendingTransactionSetNULLProc()
+1800 ? long BALDragSendMsg()
+1801 ? long BALDragAddRequest()
+1802 ? long BALDragDequeueRequest()
+1803 ? long BALDragStartDrag()
+1804 ? long BALDragSendMsgNoReply()
+1805 ? long BALDragCopyItemFlavorData()
+1806 ? long BALGetCoreDragDropLocation()
+1807 ? long BALSetCoreDragDropLocation()
+1808 ? long BALDragEndDrag()
+1900 7 long BALFindFolder()
+1901 3 long BALInitFindFolder()
+1902 1 long BALAskToPopulateRedirectedFolders()
+1A00 ? long BAL_aglChoosePixelFormat()
+1A01 ? long BAL_aglDestroyPixelFormat()
+1A02 ? long BAL_aglNextPixelFormat()
+1A03 ? long BAL_aglDescribePixelFormat()
+1A04 ? long BAL_aglDevicesOfPixelFormat()
+1A05 ? long BAL_aglQueryRendererInfo()
+1A06 ? long BAL_aglDestroyRendererInfo()
+1A07 ? long BAL_aglNextRendererInfo()
+1A08 ? long BAL_aglDescribeRenderer()
+1A09 ? long BAL_aglCreateContext()
+1A0A ? long BAL_aglDestroyContext()
+1A0B ? long BAL_aglCopyContext()
+1A0C ? long BAL_aglUpdateContext()
+1A0D ? long BAL_aglSetCurrentContext()
+1A0E ? long BAL_aglGetCurrentContext()
+1A0F ? long BAL_aglSetDrawable()
+1A10 ? long BAL_aglSetOffScreen()
+1A11 ? long BAL_aglSetFullScreen()
+1A12 ? long BAL_aglGetDrawable()
+1A13 ? long BAL_aglSetVirtualScreen()
+1A14 ? long BAL_aglGetVirtualScreen()
+1A15 ? long BAL_aglGetVersion()
+1A16 ? long BAL_aglConfigure()
+1A17 ? long BAL_aglSwapBuffers()
+1A18 ? long BAL_aglEnable()
+1A19 ? long BAL_aglDisable()
+1A1A ? long BAL_aglIsEnabled()
+1A1B ? long BAL_aglSetInteger()
+1A1C ? long BAL_aglGetInteger()
+1A1D ? long BAL_aglUseFont()
+1A1E ? long BAL_aglGetError()
+1A1F ? long BAL_aglErrorString()
+1A20 ? long BAL_aglResetLibrary()
+1A21 ? long BAL_aglExecutor()
+1B00 ? long BALICStart()
+1B01 ? long BALICStop()
+1B02 ? long BALICGetVersion()
+1B03 ? long BALICGetConfigName()
+1B04 ? long BALICGetSeed()
+1B05 ? long BALICGetPerm()
+1B06 ? long BALICBegin()
+1B07 ? long BALICGetPref()
+1B08 ? long BALICSetPref()
+1B09 ? long BALICCountPref()
+1B0A ? long BALICGetIndPref()
+1B0B ? long BALICDeletePref()
+1B0C ? long BALICEnd()
+1B0D ? long BALICGetDefaultPref()
+1B0E ? long BALICEditPreferences()
+1B0F ? long BALICLaunchURL()
+1B10 ? long BALICParseURL()
+1B11 ? long BALICCreateGURLEvent()
+1B12 ? long BALICSendGURLEvent()
+1B13 ? long BALICMapFilename()
+1B14 ? long BALICMapTypeCreator()
+1B15 1 long BAL_DisposeCarbonCoreHandle()
+1C00 3 long BALCopyObject()
+1C01 ? long BALDeleteObject()
+1D00 ? long BALGetCurrentXPrinter()
+1D01 ? long BALReleasePrinterDesc()
+1D02 1 long BALPrinterIsAuthorized()
+1D03 ? long BALGetCurrentXPrinterClientName()
+1E01 4 long BALResolveAliasFile()
+1E02 ? long BALMatchAlias()
+1E03 ? long BALNewAlias()
+1E04 7 long BALUpdateAlias()
