@@ -66,7 +66,7 @@ for i in range(len(binary) - len(MOTIF)):
                         print('...WARNING: the listing file says %s' % line[1])
                     break
             else:
-                lines.append([selector, nargs, '???'])
+                lines.append([selector, str(nargs), '???'])
                 lines.sort()
 
             for line in lines:
